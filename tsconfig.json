@@ -1,0 +1,38 @@
+{
+	"compilerOptions": {
+		// Organización de directorios
+		"rootDir": "./src", //Directorio raiz
+		"outDir": "./dist", // Directorio de salida o build
+
+		//* Compativilidad y caracteristicas de TS
+		"lib": ["ESNext"], // Le indicamos a que version de JS queremos compilar
+		"target": "ES2020", //
+		// "module": "CommonJS", // Forma moderna de manejar modulos
+		// "module": "nodenext", // Forma moderna de manejar modulos
+		// "moduleResolution": "nodenext", // Como queremos que se resuelvan los modulos
+		"module": "ESNext", // Forma moderna de manejar modulos
+		"moduleResolution": "node", // Como queremos que se resuelvan los modulos
+		"paths": {},
+
+		"strict": false, // En modo educativo, no se aplica la verificacion de tipos y permite el uso de any
+		"sourceMap": true, // Genera un mapa de sourcemap, permite el debugging en tiempo real
+		"esModuleInterop": true, // Permite la compatibilidad con modulo y CommonJS
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"declaration": true, // Genera un archivo de declaraciones
+
+		// Para trabajar con decoradore
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true
+	},
+	"include": [
+		// Que directorios y archivos queremos compilar
+		"src/**/*.ts"
+	],
+	"exclude": [
+		// Que directorios y archivos no queremos compilar
+		"node_modules",
+		"dist",
+		"**/__test__/*"
+	]
+}
