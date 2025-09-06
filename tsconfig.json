@@ -33,6 +33,6 @@
 		// Que directorios y archivos no queremos compilar
 		"node_modules",
 		"dist",
-		"**/__test__/*"
+		"src**/**/*.test.ts"
 	]
 }

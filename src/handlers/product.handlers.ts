@@ -13,7 +13,7 @@ export const getProducts = async (req: Request, res: Response) => {
 			// limit: 2
 		});
 
-		res.status(200).json({ message: "Productos obtenidos", data: products });
+		res.status(200).json({ data: products });
 
 		// res.json({ data: products });
 	} catch (error) {
@@ -45,7 +45,7 @@ export const createProduct = async (req: Request, res: Response) => {
 		// const product = new Product(req.body);
 		// await product.save();
 		const product = await Product.create(req.body); // Aquí creamos el producto
-		res.status(201).json({ message: "Producto creado", data: product });
+		res.status(201).json({ data: product });
 	} catch (error) {
 		console.log(`Se presento un error al crear: ${error}`);
 	} finally {
@@ -93,6 +93,7 @@ export const updateAvailability = async (req: Request, res: Response) => {
 			return res.status(404).json({ error: "Producto no encontrado" });
 		}
 		product.availability = !product.dataValues.availability; // Alterna el estado del producto
+		await product.save();
 
 		res.json({ data: product });
 	} catch (error) {
