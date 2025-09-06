@@ -3,9 +3,9 @@ import chalk from "chalk";
 import swaggerUI from "swagger-ui-express"; // Crea una URL para acceder a la documentación
 import cors, { CorsOptions } from "cors";
 import morgan from "morgan";
-import router from "./router";
-import db from "../src/config/db";
-import swaggerSpec, { swaggerUiOptions } from "./config/swagger";
+import router from "./router.js";
+import db from "./config/db.js"; // asumiendo que config/db.ts se compila a dist/config/db.js
+import swaggerSpec, { swaggerUiOptions } from "./config/swagger.js";
 import path from "path";
 
 const server = express();

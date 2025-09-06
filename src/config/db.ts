@@ -2,7 +2,7 @@ import { Sequelize } from "sequelize-typescript";
 import dotenv from "dotenv";
 import { fileURLToPath } from "url"; // Para recrear __dirname en ESModules
 // import path, { dirname } from "path"; // Para obtener el directorio padre //* Solo si se trabaja con CommonJS
-import Product from "../models/Product.model";
+import Product from "../models/Product.model.js";
 
 dotenv.config();
 

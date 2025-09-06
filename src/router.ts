@@ -7,9 +7,9 @@ import {
 	getProducts,
 	updateAvailability,
 	updateProduct,
-} from "./handlers/product.handlers"; // Importamos el handler para crear un producto
+} from "./handlers/product.handlers.js"; // Importamos el handler para crear un producto
 import { body, param } from "express-validator";
-import { handleInputErrors } from "./middleware/index";
+import { handleInputErrors } from "./middleware/index.js";
 
 const router = Router(); // Instancia del router
 /**

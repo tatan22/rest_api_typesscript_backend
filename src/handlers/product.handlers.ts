@@ -1,6 +1,5 @@
 import e, { Request, Response } from "express";
-import Product from "../models/Product.model";
-import { error } from "console";
+import Product from "../models/Product.model.js";
 
 export const getProducts = async (req: Request, res: Response) => {
 	// en express por defecto se le pasa req y res

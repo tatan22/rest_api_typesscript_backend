@@ -1,4 +1,4 @@
-import server from "./server";
+import server from "./server.js";
 import chalk from "chalk";
 import dotenv from "dotenv";
 dotenv.config({ debug: true }); // debug: true nos permite ver las variables de entorno
